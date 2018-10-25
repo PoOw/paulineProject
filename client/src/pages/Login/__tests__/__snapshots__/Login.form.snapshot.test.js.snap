@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The form component should render correctly 1`] = `
+<Form>
+  <div>
+    <C
+      name="email"
+      type="email"
+    />
+  </div>
+  <div>
+    <C
+      name="password"
+      type="password"
+    />
+  </div>
+  <button
+    disabled={false}
+    type="submit"
+  >
+    Connect
+  </button>
+</Form>
+`;

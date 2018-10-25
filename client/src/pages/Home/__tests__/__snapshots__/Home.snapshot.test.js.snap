@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home> should render correctly 1`] = `
+<Fragment>
+  <Homestyle__StyledIntro>
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="subtitle1"
+    >
+      <FormattedMessage
+        defaultMessage="To get started, edit"
+        id="home.get-started"
+        values={Object {}}
+      />
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      variant="caption"
+    >
+      <code>
+        src/App.js
+      </code>
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="subtitle1"
+    >
+      <FormattedMessage
+        id="home.save-to-reload"
+        values={Object {}}
+      />
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      variant="body1"
+    >
+      <FormattedMessage
+        id="home.create-route"
+        values={Object {}}
+      />
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      variant="body1"
+    >
+      <FormattedMessage
+        id="home.generate-component"
+        values={Object {}}
+      />
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      variant="caption"
+    >
+      <code>
+        yarn generate
+      </code>
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      variant="body1"
+    >
+      <FormattedMessage
+        id="home.generate-module"
+        values={Object {}}
+      />
+    </WithStyles(Typography)>
+    <WithStyles(Typography)
+      variant="body1"
+    >
+      <FormattedMessage
+        id="home.readme"
+        values={Object {}}
+      />
+    </WithStyles(Typography)>
+    <Homestyle__StyledLink
+      href="/avatar"
+      to="/avatar"
+    >
+      <WithStyles(Button)
+        color="primary"
+        variant="contained"
+      >
+        <FormattedMessage
+          id="home.use-a-link"
+          values={Object {}}
+        />
+      </WithStyles(Button)>
+    </Homestyle__StyledLink>
+  </Homestyle__StyledIntro>
+</Fragment>
+`;

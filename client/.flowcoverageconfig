@@ -1,0 +1,18 @@
+{
+  "globExcludePatterns": [
+    "node_modules/**",
+    "src/setupTests.js",
+    "src/theme.js",
+    "src/index.js",
+    "src/redux/store.js",
+    "src/__mocks__/**",
+    "src/**/*.style.js",
+    "src/serviceWorker.js"
+  ],
+  "flowCommandPath": "node_modules/.bin/flow",
+  "globIncludePatterns": [
+    "src/**/*.js"
+  ],
+  "threshold": 85,
+  "reportTypes": "html"
+}
