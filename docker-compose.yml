@@ -2,19 +2,33 @@ version: '3.4'
 
 services:
   php:
-    image: php:7.2-apache
+    image: pauline/php
     build:
       context: ./api
       target: api_platform_php
+      cache_from:
+      - pauline/php
+      - pauline/nginx
     depends_on:
       - db
     env_file:
       - ./api/.env
     volumes:
       - ./api:/srv/api:rw,cached
+  api:
+    image: pauline/api
+    build:
+      context: ./api
+      target: api_platform_nginx
+      cache_from:
+      - pauline/php
+      - pauline/nginx
+    depends_on:
+      - php
+    volumes:
+    - ./api/public:/srv/api/public:ro
     ports:
-      - "3080:80"
-
+    - "8080:80"
   db:
     # In production, you may want to use a managed database service
     image: postgres:9.6-alpine
@@ -29,6 +43,20 @@ services:
       # - ./docker/db/data:/var/lib/postgresql/data:rw
     ports:
       - "5432:5432"
+  client:
+    # Use a static website hosting service in production
+    # See https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment
+    image: pauline/client
+    build:
+      context: ./client
+      cache_from:
+      - pauline/client
+    env_file:
+    - ./client/.env
+    volumes:
+    - ./client:/usr/src/client:rw,cached
+    ports:
+    - "8081:3000"
 
 volumes:
   db-data: {}
