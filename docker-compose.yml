@@ -12,6 +12,8 @@ services:
       - ./api/.env
     volumes:
       - ./api:/srv/api:rw,cached
+    ports:
+      - "3080:80"
 
   db:
     # In production, you may want to use a managed database service
