@@ -31,7 +31,7 @@ export default class Root extends React.Component<Props> {
           <div className="header">
             <img src={logo} className="logo" alt="logo" />
             <Typography variant="h2" color="primary">
-              Welcome to Francis
+              Bienvenue au blindtest !
             </Typography>
           </div>
           {children}
