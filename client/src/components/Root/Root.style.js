@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 const StyledRoot = styled.div`
   text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   .header {
     background-color: #222;
