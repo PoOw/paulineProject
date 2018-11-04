@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-const StyledIntro = styled.div`
-  font-size: large;
+const StyledHome = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-`;
-
-export default StyledIntro;
+export default StyledHome;

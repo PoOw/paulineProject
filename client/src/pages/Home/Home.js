@@ -1,14 +1,14 @@
 // @flow
 import * as React from 'react';
+import StyledHome from './Home.style';
 
-import { FormattedMessage } from 'react-intl';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-
-import StyledIntro, { StyledLink } from './Home.style';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Home = () => (
   <React.Fragment>
+    <StyledHome>
+      <CircularProgress/>
+    </StyledHome>
   </React.Fragment>
 );
 
