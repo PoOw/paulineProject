@@ -1,11 +1,12 @@
 // @flow
 import * as React from 'react';
+import Sound from 'react-sound';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import StyledLoader, {StyledTitle} from './Home.style';
 
-const apiToken = 'BQDkyx2b7I9QUM0yuMjz_gVlF83Iihfn7TuVPMC9P-cB1zLApCcLuvJAwuh7KIE4cB_moITfebgO-Lu5GvXarH8ovy58W5ZHhZgrbYW0nHWDAfglq_yrTJzYuA1Q5QA9u73kLnx8U9wcRMfp_TPEg-JdXvQ'
+const apiToken = 'BQBkri1jlncGSHlJovFzo19x8aJEHzoLHr04irKm-fL-qFwqz85lhg7t8DFfhCVsJzxbgoyqVBxjkMFxlfkSIhe533URlEqJzFQP7rZYaw_s6yU5HR-EJ6BBII7w0z8r5TmzxUc_vC5gcFj6CLlTPa1LycU'
 
 class Home extends React.Component {
   constructor (props) {
@@ -20,12 +21,14 @@ class Home extends React.Component {
     if (this.state.songsLoaded) {
       const {total} = this.state.data;
       const {name} = this.state.data.items[0].track;
+      const {preview_url} = this.state.data.items[0].track;
       return (
         <React.Fragment>
           <StyledTitle>
             Il y a {total} résultats.<br/>
             Le titre de la première chanson est : {name}.
           </StyledTitle>
+          <Sound url={preview_url} playStatus={Sound.status.PLAYING}/>
         </React.Fragment>
       );
     } else {
