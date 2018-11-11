@@ -5,7 +5,7 @@ import Sound from 'react-sound';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
 
-import StyledLoader, {StyledTitle, buttonStyle, StyledAnswers} from './Home.style';
+import StyledLoader, {StyledTitle, StyledAnswers} from './Home.style';
 
 const apiToken = 'BQAntJkBKjV9wPxxjFuFay9hqPV3DuD2D3U8N11CiLiMK2Lv6CnMyXBp4RmfhqpgPxe2GjO3MSUvmHq8E04b74iKxN_QfbfvAqWcLc-1lAtg6K1VD2sVw8oBAg1t6w5RlR4hw5pzNvBN7fQC_m3SymbJmXk'
 
@@ -51,7 +51,7 @@ class Home extends React.Component {
           </StyledTitle>
           <StyledAnswers>
           {items.map((item) => (
-              <Button variant="contained" key={item.track.id} style={buttonStyle} color="primary" onClick={() => {this.isCorrectAnswer(item.track.id);}}>
+              <Button variant="contained" key={item.track.id} className="button" color="primary" onClick={() => {this.isCorrectAnswer(item.track.id);}}>
                 {item.track.name}
               </Button>
           ))}

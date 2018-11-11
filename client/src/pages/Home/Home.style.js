@@ -14,12 +14,6 @@ export const StyledTitle = styled.div`
   align-items: center;
 `;
 
-export const buttonStyle = {
-  margin: 'auto',
-  marginTop: '2em',
-  width: '100%',
-}
-
 export const StyledAnswers = styled.div`
   margin-left: 30%;
   margin-right: 30%;
@@ -27,6 +21,12 @@ export const StyledAnswers = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   margin-bottom: 10px;
+
+  .button  {
+    margin: auto;
+    margin-top: 2em;
+    width: 100%;
+  }
 `;
 
 export default StyledLoader;
